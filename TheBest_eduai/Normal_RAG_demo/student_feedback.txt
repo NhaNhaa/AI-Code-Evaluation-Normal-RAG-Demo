@@ -1,0 +1,308 @@
+===== Student Project Feedback =====
+
+==============================
+🔎 Student Chunk #1
+==============================
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import TodoList from "./components/TodoList";
+
+📌 Score for this chunk: 50
+📌 Feedback:
+- Missing App component.
+- PropTypes or helper functions missing.
+- Missing export statement.
+
+📌 Closest Instructor Chunk (preview):
+export default TodoItem;
+
+import React from "react";
+import TodoItem from "./TodoItem";
+
+
+==============================
+🔎 Student Chunk #2
+==============================
+function App() {
+  const [todos, setTodos] = useState([
+    { id: 1, text: "Learn React", completed: false },
+    { id: 2, text: "Build a project", completed: false },
+  ]);
+
+📌 Score for this chunk: 25
+📌 Feedback:
+- Header or Footer not used properly.
+- TodoList functionality missing.
+- PropTypes or helper functions missing.
+- Missing export statement.
+
+📌 Closest Instructor Chunk (preview):
+function TodoItem({ todo, toggleComplete, deleteTodo }) {
+  return (
+    <li style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+      {formatText(todo.text)}
+      <button onClick={() => toggleComplete(todo.id)}>Toggle</button>
+
+
+==============================
+🔎 Student Chunk #3
+==============================
+const toggleComplete = (id) => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+  // Missing deleteTodo
+
+📌 Score for this chunk: 0
+📌 Feedback:
+- Missing App component.
+- Header or Footer not used properly.
+- TodoList functionality missing.
+- PropTypes or helper functions missing.
+- Missing export statement.
+
+📌 Closest Instructor Chunk (preview):
+function TodoList({ todos, toggleComplete, deleteTodo }) {
+  return (
+    <ul>
+      {todos.map(todo => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          toggleComplete={toggleComplete}
+          deleteTodo={deleteTodo}
+        />
+      ))}
+    </ul>
+  );
+}
+
+
+==============================
+🔎 Student Chunk #4
+==============================
+// Missing deleteTodo
+
+  return (
+    <div>
+      <Header title="My Todo App" />
+      <TodoList todos={todos} toggleComplete={toggleComplete} deleteTodo={() => {}} />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+
+📌 Score for this chunk: 60
+📌 Feedback:
+- Missing App component.
+- PropTypes or helper functions missing.
+
+📌 Closest Instructor Chunk (preview):
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import TodoList from "./components/TodoList";
+import { formatText } from "./utils/helper";
+
+
+==============================
+🔎 Student Chunk #5
+==============================
+export default App;
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+import React from "react";
+
+function Footer() {
+  return <footer><p>© 2025 Todo App</p></footer>;
+}
+
+export default Footer;
+
+📌 Score for this chunk: 10
+📌 Feedback:
+- Missing App component.
+- Header or Footer not used properly.
+- TodoList functionality missing.
+- PropTypes or helper functions missing.
+
+📌 Closest Instructor Chunk (preview):
+function TodoItem({ todo, toggleComplete, deleteTodo }) {
+  return (
+    <li style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+      {formatText(todo.text)}
+      <button onClick={() => toggleComplete(todo.id)}>Toggle</button>
+
+
+==============================
+🔎 Student Chunk #6
+==============================
+export default Footer;
+
+import React from "react";
+
+function Header({ title }) {
+  return <header><h1>{title}</h1></header>;
+}
+
+export default Header;
+
+import React from "react";
+
+📌 Score for this chunk: 30
+📌 Feedback:
+- Missing App component.
+- TodoList functionality missing.
+- PropTypes or helper functions missing.
+
+📌 Closest Instructor Chunk (preview):
+ReactDOM.render(<App />, document.getElementById("root"));
+
+import React from "react";
+
+function Footer() {
+  return <footer><p>© 2025 Todo App</p></footer>;
+}
+
+export default Footer;
+
+import React from "react";
+
+function Header({ title }) {
+  return <header><h1>{title}</h1></header>;
+}
+
+
+==============================
+🔎 Student Chunk #7
+==============================
+import React from "react";
+
+function TodoItem({ todo, toggleComplete }) { // Missing deleteTodo
+  return (
+    <li style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+      {todo.text} 
+      <button onClick={() => toggleComplete(todo.id)}>Toggle</button>
+    </li>
+  );
+}
+
+📌 Score for this chunk: 0
+📌 Feedback:
+- Missing App component.
+- Header or Footer not used properly.
+- TodoList functionality missing.
+- PropTypes or helper functions missing.
+- Missing export statement.
+
+📌 Closest Instructor Chunk (preview):
+function App() {
+  const [todos, setTodos] = useState([
+    { id: 1, text: "Learn React", completed: false },
+    { id: 2, text: "Build a project", completed: false },
+  ]);
+
+
+==============================
+🔎 Student Chunk #8
+==============================
+export default TodoItem;
+
+import React from "react";
+import TodoItem from "./TodoItem";
+
+📌 Score for this chunk: 10
+📌 Feedback:
+- Missing App component.
+- Header or Footer not used properly.
+- TodoList functionality missing.
+- PropTypes or helper functions missing.
+
+📌 Closest Instructor Chunk (preview):
+function TodoList({ todos, toggleComplete, deleteTodo }) {
+  return (
+    <ul>
+      {todos.map(todo => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          toggleComplete={toggleComplete}
+          deleteTodo={deleteTodo}
+        />
+      ))}
+    </ul>
+  );
+}
+
+
+==============================
+🔎 Student Chunk #9
+==============================
+function TodoList({ todos, toggleComplete, deleteTodo }) {
+  return (
+    <ul>
+      {todos.map(todo => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          toggleComplete={toggleComplete}
+          deleteTodo={deleteTodo}
+        />
+      ))}
+    </ul>
+  );
+}
+
+📌 Score for this chunk: 30
+📌 Feedback:
+- Missing App component.
+- Header or Footer not used properly.
+- PropTypes or helper functions missing.
+- Missing export statement.
+
+📌 Closest Instructor Chunk (preview):
+function App() {
+  const [todos, setTodos] = useState([
+    { id: 1, text: "Learn React", completed: false },
+    { id: 2, text: "Build a project", completed: false },
+  ]);
+
+
+==============================
+🔎 Student Chunk #10
+==============================
+export default TodoList;
+
+export function formatText(text) {
+  return text.trim().toUpperCase();
+}
+
+📌 Score for this chunk: 40
+📌 Feedback:
+- Missing App component.
+- Header or Footer not used properly.
+- PropTypes or helper functions missing.
+
+📌 Closest Instructor Chunk (preview):
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import TodoList from "./components/TodoList";
+import { formatText } from "./utils/helper";
+
+
+==============================
+🏆 Final Project Score: 25/100
+==============================
